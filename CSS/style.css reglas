@@ -1,0 +1,13 @@
+/*Esto es un comentario dentro de css
+h1 selector de etiqueta*/
+
+h1{
+    /*propiedad: valor;*/
+    color: red;
+}
+main{
+    background-color: black;
+}
+div{
+    background-color: aqua;
+}

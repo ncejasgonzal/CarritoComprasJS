@@ -1,0 +1,54 @@
+.face {
+    background-color: map-get($redes, face);
+    margin: 1rem;
+}
+.twitter {
+    background-color: map-get($redes , twitter);
+    animation-delay: 0.5s;
+    margin: 1rem;
+}
+.ig {
+    background-color: map-get($redes, ig);
+    animation-delay: 1s;
+    margin: 1rem;
+}
+.wsp {
+    background-color: map-get($redes , wsp);
+    animation-delay: 1.5s;
+    margin: 1rem;
+}
+.google {
+    background-color: map-get($redes, google);
+    animation-delay: 2.0s;
+    margin: 1rem;
+}
+.infoFooter {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding-bottom: 1rem;
+    .anclaMail{
+        text-decoration: none;
+        color:white;
+        text-decoration: underline;
+    }
+}
+
+@media screen and (max-width: 1199px) and (min-width: 0px){
+    .face {
+        margin: 0.5rem;
+    }
+    .twitter {
+        margin: 0.5rem;
+    }
+    .ig {
+        margin: 0.5rem;
+    }
+    .wsp {
+        margin: 0.5rem;
+    }
+    .google {
+        margin: 0.5rem;
+    }
+    .infoFooter {
+        margin: 0.5rem;
+        }
+}

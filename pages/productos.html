@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Moskú Barberia, encontra los mejores productos y marcas en un solo lugar.">
+    <meta name="keywords"
+        content="Barbería, Peluquería, productos de peluquería, tijeras, maquinas, shaver, afeitadoras, seca pelo, planchita de pelo, Wahl, Teknipro, Ga.Ma, gama, Andis, Kemei, tijeras de corte, navajas">
+    <!--icono favicon-->
+    <link rel="icon" href="../favicon.ico.png" type="image/x-icon">
+    <!--LINK CSS BOOTSTRAP
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">-->
+    <!--link cdn para iconos Fontawesome-->
+    <script src="https://kit.fontawesome.com/268dc6ed7a.js" crossorigin="anonymous"></script>
+    <!--LOCAL BOOTSTRAP-->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Productos | Moskú</title>
+</head>
+
+<body class="fondoMosku">
+    <header class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent h5">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html"><img class="logo animacionLogo"
+                        src="../assets/img/LOGOMOSKU3.png" height="75" alt="Logo Moskú barbería con mostacho"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse  justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav gap-2 ">
+                        <li class="nav-item btn btn-secondary">
+                            <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item btn btn-secondary">
+                            <a class="nav-link active" href="#">Productos</a>
+                        </li>
+                        <li class="nav-item btn btn-secondary">
+                            <a class="nav-link active" href="./reservas.html">Reservas</a>
+                        </li>
+                        <li class="nav-item btn btn-secondary">
+                            <a class="nav-link active" href="./ubicacion.html">Ubicación</a>
+                        </li>
+                        <li class="nav-item btn btn-secondary">
+                            <a class="nav-link active" href="./unirse.html">Unirse</a>
+                        </li>
+                    </ul>
+                    <div class="carrito-icono">
+                        <button class="carritoIcon btn-secondary" data-bs-toggle="modal"
+                            data-bs-target="#modal-carrito">
+                            <i class="fas fa-shopping-cart"></i>
+                        </button>
+                        <span id="contadorCarrito" class="contadorCarrito">0</span>
+                    </div>
+                    <div class="modal fade" id="modal-carrito" tabindex="-1" aria-labelledby="modal-carrito-label"
+                        aria-hidden="true">
+                        <div class="modal-dialog d-flex align-items-center justify-content-center">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modal-carrito-label">Carrito de compras</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div id="carrito-items-modal"></div>
+                                    <div id="carrito-total-modal"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button id="btn-pagar" class="btn btn-primary">Pagar</button>
+                                    <button id="btn-cerrar" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Cerrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal fade" id="modal-pago" tabindex="-1" aria-labelledby="modal-pago-label"
+                        aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modal-pago-label">Ingresa tu medio de Pago</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="form-pago">
+                                        <div class="mb-3">
+                                            <label for="numeroTarjeta" class="form-label">Número de Tarjeta:</label>
+                                            <input type="text" placeholder="XXXX XXXX XXXX XXXX" class="form-control" id="numeroTarjeta" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="nombreTitular" class="form-label">Nombre del Titular:</label>
+                                            <input type="text" class="form-control" id="nombreTitular" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="fechaVencimiento" class="form-label">Fecha de
+                                                Vencimiento:</label>
+                                                <input type="text" placeholder="MM/YY" id="fechaVencimiento" pattern="(0[1-9]|1[0-2])\/\d{2}" required>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="tipoTarjeta" class="form-label">Tipo de Tarjeta:</label>
+                                            <select class="form-select" id="tipoTarjeta" required>
+                                                <option value="debito">Débito</option>
+                                                <option value="credito">Crédito</option>
+                                            </select>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="cuotas" class="form-label">Cantidad de Cuotas:</label>
+                                            <input type="number" class="form-control" id="cuotas" required>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Realizar Pago</button>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Cerrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal de validación -->
+                    <div class="modal fade" id="modal-validacion" tabindex="-1" aria-labelledby="modal-validacion-label" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modal-validacion-label">Mensaje de validación</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div id="mensaje-validacion" class="modal-message"></div>
+                                    <div id="mensaje-validacion-modal" class="modal-message"></div>
+                                    <div id="mensaje-exito" class="modal-message"></div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container mainProductos">
+        <!-- Modal del carrito -->
+
+        <div class=" carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="3500">
+                    <img src="../assets/img/pruebisima-logo-wahl.png" class="d-block w-100" alt="Logo de marca Wahl">
+                </div>
+                <div class="carousel-item" data-bs-interval="3500">
+                    <img src="../assets/img/LOGO-BABYLISS-zyro-image (1).jpg" class="d-block w-100"
+                        alt="Logo de marca BaByliss">
+                </div>
+                <div class="carousel-item" data-bs-interval="3500">
+                    <img src="../assets/img/pruebisima-teknikpro.png" class="d-block w-100"
+                        alt="Logo de marca Teknikpro">
+                </div>
+                <div class="carousel-item" data-bs-interval="3500">
+                    <img src="../assets/img/LOGO-ANDIS-zyro-image.jpg" class="d-block w-100" alt="Logo de marca Andis">
+                </div>
+                <div class="carousel-item" data-bs-interval="3500">
+                    <img src="../assets/img/pruebisima-kemei.png" class="d-block w-100" alt="Logo de marca Kemei">
+                </div>
+                <div class="carousel-item" data-bs-interval="3500">
+                    <img src="../assets/img/LOGO-REVLON-zyro-image.jpg" class="d-block w-100"
+                        alt="Logo de marca Revlon">
+                </div>
+                <div class="carousel-item" data-bs-interval="3500">
+                    <img src="../assets/img/LOGO-GAMA-zyro-image.jpg" class="d-block w-100" alt="Logo de marca Ga.Ma">
+                </div>
+            </div>
+        </div>
+        <section class="tituloYParrafoProductos">
+            <div class="h1  d-flex justify-content-center flex-wrap">
+                <h1 class="h1Index ">Encontrá lo que más buscas.</h1>
+            </div>
+            <div>
+                <p class="h4 d-flex justify-content-center flex-wrap text-center h4Index">Ahora todos nuestros
+                    productos, en un solo lugar.</p>
+                <p class=" h4 d-flex justify-content-center flex-wrap text-center h4Index">Tenemos el mejor precio y la
+                    mejor calidad del mercado.</p>
+            </div>
+        </section>
+        <div id="mensaje" class="mensaje"></div>
+        <hr>
+        <section class="container sectionCardsProductos">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                    <div class="card estiloCard" data-aos="zoom-in">
+                        <img src="../assets/img/----PATILLERA_BABYLISS_GOLD_zyro-image.jpg" class="card-img-top"
+                            alt="Maquina de cortar pelo">
+                        <div class="card-body">
+                            <h2 class="card-title h4Index">BaByliss Gold</h2>
+                            <p class="card-text">Patillera Babyliss gold inalámbrica.
+                            </p>
+                            <button class="btn btnAzul btnAgregarCarrito" dataNombreProducto="BaByliss Gold"
+                                dataPrecioProducto="130000">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                    <div class="card estiloCard" data-aos="zoom-in">
+                        <img src="../assets/img/----WAHL_MAGIC_CLIP_zyro-image.jpg" class="card-img-top"
+                            alt="Maquina de cortar pelo">
+                        <div class="card-body">
+                            <h2 class="card-title h4Index">Wahl Magic Clip Cordless</h2>
+                            <p class="card-text">Cortadora Wahl Magic Clip.
+                            </p>
+                            <button class="btn btnAzul btnAgregarCarrito" dataNombreProducto="Wahl Magic Clip"
+                                dataPrecioProducto="95000">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                    <div class="card estiloCard" data-aos="zoom-in">
+                        <img src="../assets/img/----WAHL_SUPER_TAPER_zyro-image.jpg" class="card-img-top"
+                            alt="Maquina de cortar pelo">
+                        <div class="card-body">
+                            <h2 class="card-title h4Index">Wahl Super Taper</h2>
+                            <p class="card-text">Cortadora Wahl Super Taper.
+                            </p>
+                            <button class="btn btnAzul btnAgregarCarrito" dataNombreProducto="Wahl Super Taper"
+                                dataPrecioProducto="43000">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                    <div class="card estiloCard" data-aos="zoom-in">
+                        <img src="../assets/img/----WAHL_PATILLER_DETAILER_zyro-image.jpg" class="card-img-top"
+                            alt="Maquina de cortar pelo">
+                        <div class="card-body">
+                            <h2 class="card-title h4Index">Wahl Detailer Professional</h2>
+                            <p class="card-text">Patillera Wahl Detailer
+                            </p>
+                            <button class="btn btnAzul btnAgregarCarrito"
+                                dataNombreProducto="Wahl Detailer Professional" dataPrecioProducto="50000">Agregar
+                                al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                    <div class="card estiloCard" data-aos="zoom-in">
+                        <img src="../assets/img/-----SHAVER_ANDIS_zyro-image.jpg" class="card-img-top"
+                            alt="Rasuradora de cabello">
+                        <div class="card-body">
+                            <h2 class="card-title h4Index">Shaver Andis</h2>
+                            <p class="card-text">Rasuradora Andis Professional
+                            </p>
+                            <button class="btn btnAzul btnAgregarCarrito" dataNombreProducto="Rasuradora Andis"
+                                dataPrecioProducto="60000">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                    <div class="card estiloCard" data-aos="zoom-in">
+                        <img src="../assets/img/----KIT_BARBERIA_INICIAL_zyro-image.jpg" class="card-img-top"
+                            alt="Elementos de peluqueria">
+                        <div class="card-body">
+                            <h2 class="card-title h4Index">Kit barbería inicial</h2>
+                            <p class="card-text">Set para barbero inicial
+                            </p>
+                            <button class="btn btnAzul btnAgregarCarrito" dataNombreProducto="Kit Barbería inicial"
+                                dataPrecioProducto="10000">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                    <div class="card estiloCard" data-aos="zoom-in">
+                        <img src="../assets/img/----SHAVER-TEKNIKPRO_zyro-image.png" class="card-img-top"
+                            alt="Rasuradora de cabello">
+                        <div class="card-body">
+                            <h2 class="card-title h4Index">Shaver Teknikpro</h2>
+                            <p class="card-text">Rasuradora Teknikpro profesional
+                            </p>
+                            <button class="btn btnAzul btnAgregarCarrito"
+                                dataNombreProducto="Shaver Razuradora Teknikpro" dataPrecioProducto="15000">Agregar
+                                al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <!---->
+                <div class="col-sm-12 col-md-12 col-lg-4" data-aos="zoom-in">
+                    <div class="card estiloCard">
+                        <img src="../assets/img/----MAJESTIC-CLIPPER-TEKNIKPRO_zyro-image.png" class="card-img-top"
+                            alt="Maquina de cortar pelo">
+                        <div class="card-body">
+                            <h2 class="card-title h4Index">Teknikpro Majestic Clipper</h2>
+                            <p class="card-text">Cortadora Majestic Clipper
+                            </p>
+                            <button class="btn btnAzul btnAgregarCarrito"
+                                dataNombreProducto="Teknikpro Majestic Clipper" dataPrecioProducto="16000">Agregar
+                                al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                    <div class="card estiloCard" data-aos="zoom-in">
+                        <img src="../assets/img/----SECAPELOELITE2800-TEKNIKPRO_zyro-image.jpg" class="card-img-top"
+                            alt="Secador de pelo">
+                        <div class="card-body">
+                            <h2 class="card-title h4Index">Secador de pelo Teknikpro</h2>
+                            <p class="card-text">Secador Teknikpro Elite2800
+                            </p>
+                            <button class="btn btnAzul btnAgregarCarrito" dataNombreProducto="Secador de Pelo Teknikpro"
+                                dataPrecioProducto="15000">Agregar al
+                                carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                    <div class="card estiloCard" data-aos="zoom-in">
+                        <img src="../assets/img/----PLANCHITA_GAMAELEGANCEKERATION_zyro-image.png" class="card-img-top"
+                            alt="Planchita de pelo">
+                        <div class="card-body">
+                            <h2 class="card-title h4Index">Plancha de pelo Ga.Ma</h2>
+                            <p class="card-text">Plancha Ga.Ma Elegance Keration
+                            </p>
+                            <button class="btn btnAzul btnAgregarCarrito"
+                                dataNombreProducto="Planchita de pelo GaMa Elegance Keration"
+                                dataPrecioProducto="24000">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                    <div class="card estiloCard" data-aos="zoom-in">
+                        <img src="../assets/img/----KIT-REVLON-PLANCHITA+SECADOR_zyro-image.png" class="card-img-top"
+                            alt="Kit de planchita con secador de pelo">
+                        <div class="card-body">
+                            <h2 class="card-title h4Index">Kit Revlon</h2>
+                            <p class="card-text">Kit secador + planchita Revlon
+                            </p>
+                            <button class="btn btnAzul btnAgregarCarrito"
+                                dataNombreProducto="Kit Revlon Planchita + Secador" dataPrecioProducto="22000">Agregar
+                                al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-4">
+                    <div class="card estiloCard" data-aos="zoom-in">
+                        <img src="../assets/img/----PATILLERA-KEMEI-70YEARS_zyro-image.png" class="card-img-top"
+                            alt="Maquina de cortar pelo">
+                        <div class="card-body">
+                            <h2 class="card-title h4Index">Trimmer Kemei</h2>
+                            <p class="card-text">Patillera Kemei edición 70Años
+                            </p>
+                            <button class="btn btnAzul btnAgregarCarrito" dataNombreProducto="Patillera Kemei 70 Years"
+                                dataPrecioProducto="24000">Agregar al
+                                carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </main>
+    <hr>
+    <footer class="container-fluid bg-transparent text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Facebook -->
+                <a class="buttonFooter btn text-white btn-floating face icono" href="https://www.facebook.com"
+                    target="_blank" role="button"><i class="fab fa-facebook-f"></i></a>
+                <!-- Twitter -->
+                <a class="buttonFooter btn text-white btn-floating twitter icono" href="https://twitter.com/"
+                    target="_blank" role="button"><i class="fab fa-twitter"></i></a>
+                <!-- Instagram -->
+                <a class="buttonFooter btn text-white btn-floating ig icono"
+                    href="https://www.instagram.com/moskubarberia" target="_blank" role="button"><i
+                        class="fab fa-instagram"></i></a>
+                <!-- WhatsApp -->
+                <a class="buttonFooter btn text-white btn-floating wsp icono" href="https://wa.me/541138639232"
+                    target="_blank" role="button"><i class="fab fa-whatsapp"></i></a>
+                <!-- Google -->
+                <a class="buttonFooter btn text-white btn-floating google icono" href="https://www.google.com"
+                    target="_blank" role="button"><i class="fab fa-google"></i></a>
+            </section>
+        </div>
+        <div class="text-center infoFooter">
+            <div>
+                <a class="anclaMail" href="https://www.google.com">
+                    moskubarberia2020@gmail.com
+                </a>
+            </div>
+            <!-- Copyright -->
+            <div>
+                © 2023 Copyright: Nicolás Agustín Cejas González.
+            </div>
+        </div>
+    </footer>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../JS/app.js"></script>
+</body>
+
+</html>

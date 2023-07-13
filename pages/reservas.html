@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="No te quedes sin tu turno, reserva lo antes posible con nuestros mejor staff">
+    <meta name="keywords" content="Reserva, agenda, turno, turnos, corte, corte de pelo, teñir, barberia">
+    <!--icono favicon-->
+    <link rel="icon" href="../favicon.ico.png" type="image/x-icon">
+    <!--LINK CSS BOOTSTRAP
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">-->
+    <!--link cdn para iconos Fontawesome-->
+    <script src="https://kit.fontawesome.com/268dc6ed7a.js" crossorigin="anonymous"></script>
+    <!--LOCAL BOOTSTRAP-->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="../css/style.css">
+    <title>Reservas | Moskú</title>
+</head>
+
+<body class="fondoMosku">
+    <header class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent h5">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html"><img class="logo animacionLogo"
+                        src="../assets/img/LOGOMOSKU3.png" height="75"
+                        alt="Logo Moskú barbería con mostacho"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse  justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav gap-2 ">
+                        <li class="nav-item btn btn-secondary">
+                            <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item btn btn-secondary">
+                            <a class="nav-link active" href="./productos.html">Productos</a>
+                        </li>
+                        <li class="nav-item btn btn-secondary">
+                            <a class="nav-link active" href="#">Reservas</a>
+                        </li>
+                        <li class="nav-item btn btn-secondary">
+                            <a class="nav-link active" href="./ubicacion.html">Ubicación</a>
+                        </li>
+                        <li class="nav-item btn btn-secondary">
+                            <a class="nav-link active" href="./unirse.html">Unirse</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="tituloReservas">
+            <div class="h1  d-flex justify-content-center flex-wrap">
+                <h1 class="h1Index ">Realizá tu reserva aquí.</h1>
+            </div>
+            <div>
+                <Tenemos class="h4 d-flex justify-content-center flex-wrap text-center h4Index">¡No te quedes sin tu
+                    turno, nuestros barberos te están esperando!</p>
+            </div>
+        </section>
+        <hr>
+        <section class="container seccionCardsReservas">
+            <div class="row">
+                <div class="col-sm-12 col-md-12 col-lg-4 estiloCardReservas ">
+                    <div class="card estiloCard" data-aos="flip-left">
+                        <!--tamaño img 830x990-->
+                        <img class="imagenReserva" src="../assets/img/EnzoMoskuReservaRedim1.jpg" class=" card-img-top"
+                            alt="fotografia barbero Enzo">
+                        <div class="card-body">
+                            <h2 class="card-title h4Index">ENZO</h2>
+                            <p class="card-text">Mosku's barber & colorist</p>
+                            <a href="https://wa.me/541138639232" target="_blank"
+                                class="btn btnReserva fab fa-whatsapp">Reservar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-4 estiloCardReservas">
+                    <div class="card estiloCard" data-aos="flip-left">
+                        <img class="imagenReserva" src="../assets/img/IgnacioMoskuReservaRedim.jpg"
+                            class=" card-img-top" alt="fotografia barbero Ignacio">
+                        <div class="card-body">
+                            <h2 class="card-title h4Index">IGNACIO</h2>
+                            <p class="card-text">Mosku's barber & colorist
+                            </p>
+                            <a href="https://wa.me/541138639232" target="_blank"
+                                class="btn btnReserva fab fa-whatsapp">Reservar</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-4 estiloCardReservas">
+                    <div class="card estiloCard" data-aos="flip-left">
+                        <img class="imagenReserva" src="../assets/img/AlanMoskuReservaRedim.jpg" class="card-img-top"
+                            alt="fotografia barbero Alan ">
+                        <div class="card-body">
+                            <h2 class="card-title h4Index">ALAN</h2>
+                            <p class="card-text">Mosku's barber & colorist
+                            </p>
+                            <a href="https://wa.me/541140927655 " target="_blank"
+                                class="btn btnReserva fab fa-whatsapp">Reservar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="justify-content-center d-flex flex-wrap gap-4">
+                    <div class="col-sm-12 col-md-12 col-lg-4 estiloCardReservas2 ">
+                        <div class="card estiloCard cardReserva" data-aos="flip-right">
+                            <img class="imagenReserva" src="../assets/img/SantiMoskuReservaRedim.jpg"
+                                class="card-img-top" alt="fotografia barbero Santi">
+                            <div class="card-body">
+                                <h2 class="card-title h4Index">SANTI</h2>
+                                <p class="card-text">Mosku's barber
+                                </p>
+                                <a href="https://wa.me/541126285280" target="_blank"
+                                    class="btn btnReserva fab fa-whatsapp">Reservar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-12 flex-wrap col-lg-4 estiloCardReservas2 ">
+                        <div class="card estiloCard cardReserva" data-aos="flip-right">
+                            <img class="imagenReserva" src="../assets/img/JoelMoskuReservaRedim.jpg"
+                                class="card-img-top" alt="fotografia barbero Joel">
+                            <div class="card-body">
+                                <h2 class="card-title h4Index">JOEL</h2>
+                                <p class="card-text">Mosku's barber
+                                </p>
+                                <a href="https://wa.me/541162886817" target="_blank"
+                                    class="btn btnReserva fab fa-whatsapp">Reservar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <hr>
+    <footer class="container-fluid bg-transparent text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Social media -->
+            <section class="mb-4 seccionIconos">
+                <!-- Facebook -->
+                <a class="buttonFooter btn text-white btn-floating face icono" href="https://www.facebook.com"
+                    target="_blank" role="button"><i class="fab fa-facebook-f"></i></a>
+                <!-- Twitter -->
+                <a class="buttonFooter btn text-white btn-floating twitter icono" href="https://twitter.com/"
+                    target="_blank" role="button"><i class="fab fa-twitter"></i></a>
+                <!-- Instagram -->
+                <a class="buttonFooter btn text-white btn-floating ig icono"
+                    href="https://www.instagram.com/moskubarberia" target="_blank" role="button"><i
+                        class="fab fa-instagram"></i></a>
+                <!-- WhatsApp -->
+                <a class="buttonFooter btn text-white btn-floating wsp icono" href="https://wa.me/541138639232"
+                    target="_blank" role="button"><i class="fab fa-whatsapp"></i></a>
+                <!-- Google -->
+                <a class="buttonFooter btn text-white btn-floating google icono" href="https://www.google.com"
+                    target="_blank" role="button"><i class="fab fa-google"></i></a>
+            </section>
+        </div>
+        <div class="text-center infoFooter">
+            <div>
+                <a class="anclaMail" href="https://www.google.com">
+                    moskubarberia2020@gmail.com
+                </a>
+            </div>
+            <!-- Copyright -->
+            <div>
+                © 2023 Copyright: Nicolás Agustín Cejas González.
+            </div>
+        </div>
+    </footer>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

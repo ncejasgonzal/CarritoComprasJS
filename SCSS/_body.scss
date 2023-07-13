@@ -1,0 +1,21 @@
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/img/Fondomosku1920px.jpg);
+    background-position: $centrar $centrar;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: $color-blanco;
+    font-family: $fuente-principal;
+}
+
+@media screen and (max-width: 1280px) and (min-width:721px) {
+    body {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/img/Fondomosku1280px.jpg);
+    }
+}
+
+@media screen and (max-width: 720px) and (min-width:0px) {
+    body {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../assets/img/Fondomosku720px.jpg);
+    }
+}

@@ -1,0 +1,196 @@
+.logo {
+    border-radius: 50%;
+}
+
+.animacionLogo {
+    animation-duration: 5s;
+    animation-name: animLogo;
+    animation-iteration-count: infinite;
+}
+
+@keyframes animLogo {
+    from {
+        -webkit-transform: rotate(0deg);
+        transform: rotateY(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(180deg);
+        transform: rotateY(180deg);
+    }
+
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotateY(360deg);
+    }
+}
+
+.carrito-icono {
+    display: flex;
+    margin: 1rem;
+    width: 3rem;
+    height: 3rem;
+    font-size: 2rem;
+}
+
+.carritoIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carrito-activo {
+    display: block;
+}
+
+.carrito-virtual {
+    display: none;
+}
+
+.modal {
+    
+    display: none;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    outline: 0;
+}
+
+.modal-title{
+    color: #000;
+    font-weight: bolder;
+}
+
+.modal-body label {
+    color: #000;
+}
+
+.modal-body input[type="text"],
+.modal-body select {
+    color: #000;
+}
+
+.modal-dialog {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    max-height: 95vh;
+    background-size: contain;
+}
+
+#carrito-items-modal {
+    max-height: 60%;
+}
+
+.carrito-item {
+    overflow-wrap: break-word;
+}
+
+.carrito-nombre {
+    max-width: 80%;
+    word-break: break-word;
+}
+
+.carrito-items-modal {
+    flex-grow: 1;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.carrito-total {
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+/* Estilos para el modal del carrito */
+.modal-content {
+    height: 95vh;
+    overflow-y: auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Estilos para los elementos del carrito */
+.carrito-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #6865658f;
+    border-radius: 5px;
+}
+
+.carrito-item span {
+    margin-bottom: 5px;
+}
+
+.carrito-nombre {
+    font-weight: bold;
+    color: black !important;
+}
+
+.carrito-cantidad,
+.carrito-precio {
+    margin-left: 10px;
+    color: black;
+}
+
+.carrito-total {
+    font-weight: bold;
+    margin-top: 10px;
+    color: black;
+    font-weight: bold;
+}
+
+/* Estilos para los botones del modal */
+.modal-footer {
+    justify-content: space-between;
+}
+
+.btn-pagar {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.btn-cerrar {
+    background-color: #6c757d;
+    color: #fff;
+}
+
+
+#modal-validacion .modal-body {
+    color: black;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.modal-message {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.modal-message.error {
+    color: red;
+}
+
+.modal-message.exito {
+    color: green;
+}

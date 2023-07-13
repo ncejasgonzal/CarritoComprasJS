@@ -1,0 +1,60 @@
+.MainIndex {
+    .TituloMianIndex {
+        margin-top: 8rem;
+        margin-bottom: 10rem;
+    }
+
+    .estiloCard {
+        background-color: rgba(126, 117, 117, 0.555);
+        font-family: $fuente-principal;
+        font-weight: 100;
+        margin-bottom: $margin-b3;
+
+        .card-img-top {
+            width: $ancho-100;
+            height: 60%;
+            object-fit: cover;
+        }
+
+        .cuerpoCardIndex {
+            .btnNegro {
+                display: inline-block;
+                border-radius: 0.25rem;
+                color: aliceblue;
+                background-color: black;
+            }
+
+            .btnAzul {
+                @extend .btnNegro;
+                background-color: rgb(35, 104, 207);
+            }
+
+            .btnBlanco {
+                @extend .btnNegro;
+                background-color: white;
+                color: black;
+            }
+        }
+    }
+
+    .contenedorVideo {
+        margin-top: 2rem;
+        margin-bottom: 3rem;
+    }
+}
+
+.MainIndex {
+    @media screen and (max-width: 1199px) and (min-width: 0px) {
+        .TituloMianIndex {
+            text-align: $centrar;
+        }
+
+        .estiloCard {
+            margin-top: 0.8rem;
+            width: 70%;
+            display: flex;
+            justify-content: center;
+            margin-left: 15%;
+        }
+    }
+}
