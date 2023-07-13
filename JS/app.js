@@ -274,7 +274,7 @@ formPago.addEventListener('submit', function (event) {
 
     // Obtener fecha actual
     const fechaActual = new Date();
-    const mesActual = fechaActual.getMonth() + 1; // Los meses en JavaScript van de 0 a 11
+    const mesActual = fechaActual.getMonth() + 1; // Mes del año
     const anoActual = fechaActual.getFullYear() % 100; // Obtener los últimos 2 dígitos del año
 
     // Verificar si la fecha de vencimiento es válida
