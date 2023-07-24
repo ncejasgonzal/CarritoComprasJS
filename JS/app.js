@@ -165,7 +165,7 @@ function crearCardProducto(producto) {
 // Función para cargar los productos en el DOM
 async function cargarProductos() {
     const productContainer = document.getElementById('contenedorProductos');
-    productContainer.innerHTML = ''; // Limpiar el contenedor de productos
+    productContainer.innerHTML = '';
 
     const productos = await obtenerProductos();
 
@@ -173,7 +173,6 @@ async function cargarProductos() {
         const cardProducto = crearCardProducto(producto);
         productContainer.appendChild(cardProducto);
     });
-}
 
 // Evento al hacer clic en el botón "Agregar al carrito"
 let botonesAgregarCarrito = document.querySelectorAll('.btnAgregarCarrito');
@@ -193,6 +192,7 @@ botonesAgregarCarrito.forEach(function (boton) {
         });
     });
 });
+}
 
 // Evento al cargar la página
 window.addEventListener('DOMContentLoaded', function () {
