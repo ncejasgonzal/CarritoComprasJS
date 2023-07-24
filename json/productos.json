@@ -1,0 +1,76 @@
+{
+    "productos": [
+        {
+            "nombre": "BaByliss Gold",
+            "imagen": "../assets/img/----PATILLERA_BABYLISS_GOLD_zyro-image.jpg",
+            "descripcion": "Patillera Babyliss gold inalámbrica.",
+            "precio": 130000
+        },
+        {
+            "nombre": "Wahl Magic Clip Cordless",
+            "imagen": "../assets/img/----WAHL_MAGIC_CLIP_zyro-image.jpg",
+            "descripcion": "Cortadora Wahl Magic Clip.",
+            "precio": 95000
+        },
+        {
+            "nombre": "Wahl Super Taper",
+            "imagen": "../assets/img/----WAHL_SUPER_TAPER_zyro-image.jpg",
+            "descripcion": "Cortadora Wahl Super Taper.",
+            "precio": 43000
+        },
+        {
+            "nombre": "Wahl Detailer Professional",
+            "imagen": "../assets/img/----WAHL_PATILLER_DETAILER_zyro-image.jpg",
+            "descripcion": "Patillera Wahl Detailer.",
+            "precio": 50000
+        },
+        {
+            "nombre": "Shaver Andis",
+            "imagen": "../assets/img/-----SHAVER_ANDIS_zyro-image.jpg",
+            "descripcion": "Rasuradora Andis Professional.",
+            "precio": 60000
+        },
+        {
+            "nombre": "Kit barbería inicial",
+            "imagen": "../assets/img/----KIT_BARBERIA_INICIAL_zyro-image.jpg",
+            "descripcion": "Set para barbero inicial.",
+            "precio": 10000
+        },
+        {
+            "nombre": "Shaver Teknikpro",
+            "imagen": "../assets/img/----SHAVER-TEKNIKPRO_zyro-image.png",
+            "descripcion": "Rasuradora Teknikpro profesional.",
+            "precio": 15000
+        },
+        {
+            "nombre": "Teknikpro Majestic Clipper",
+            "imagen": "../assets/img/----MAJESTIC-CLIPPER-TEKNIKPRO_zyro-image.png",
+            "descripcion": "Cortadora Majestic Clipper.",
+            "precio": 16000
+        },
+        {
+            "nombre": "Secador de pelo Teknikpro",
+            "imagen": "../assets/img/----SECAPELOELITE2800-TEKNIKPRO_zyro-image.jpg",
+            "descripcion": "Secador Teknikpro Elite2800.",
+            "precio": 15000
+        },
+        {
+            "nombre": "Plancha de pelo Ga.Ma",
+            "imagen": "../assets/img/----PLANCHITA_GAMAELEGANCEKERATION_zyro-image.png",
+            "descripcion": "Plancha Ga.Ma Elegance Keration.",
+            "precio": 24000
+        },
+        {
+            "nombre": "Kit Revlon Planchita + Secador",
+            "imagen": "../assets/img/----KIT-REVLON-PLANCHITA+SECADOR_zyro-image.png",
+            "descripcion": "Kit secador + planchita Revlon.",
+            "precio": 22000
+        },
+        {
+            "nombre": "Patillera Kemei 70 Years",
+            "imagen": "../assets/img/----PATILLERA-KEMEI-70YEARS_zyro-image.png",
+            "descripcion": "Patillera Kemei edición 70Años.",
+            "precio": 24000
+        }
+    ]
+}

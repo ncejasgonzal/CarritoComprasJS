@@ -103,7 +103,7 @@ function mostrarProductosCarrito() {
         let botonEliminar = document.createElement('button');
         botonEliminar.classList.add('btnEliminar');
         botonEliminar.textContent = 'Eliminar';
-        botonEliminar.addEventListener('click', function() {
+        botonEliminar.addEventListener('click', function () {
             eliminarDelCarrito(producto);
         });
 
@@ -122,9 +122,64 @@ function mostrarProductosCarrito() {
     carritoItemsElement.appendChild(totalElement);
 }
 
+// Función para cargar los productos desde el archivo JSON usando fetch
+async function obtenerProductos() {
+    try {
+        const response = await fetch('../json/productos.json');
+        if (!response.ok) {
+            throw new Error('Error al cargar los productos');
+        }
+        const data = await response.json();
+        return data.productos;
+    } catch (error) {
+        console.error(error);
+        return []; 
+    }
+}
+
+// Función para crear la card de un producto
+function crearCardProducto(producto) {
+    const card = document.createElement('div');
+    card.classList.add('col-sm-12', 'col-md-6', 'col-lg-4');
+
+    const cardInner = document.createElement('div');
+    cardInner.classList.add('card', 'estiloCard');
+    cardInner.setAttribute('data-aos', 'zoom-in');
+
+    cardInner.innerHTML = `
+        <img src="${producto.imagen}" class="card-img-top" alt="${producto.nombre}">
+        <div class="card-body">
+            <h2 class="card-title h4Index">${producto.nombre}</h2>
+            <p class="card-text">${producto.descripcion}</p>
+            <button class="btn btnAzul btnAgregarCarrito" dataNombreProducto="${producto.nombre}" dataPrecioProducto="${producto.precio}">
+                Agregar al carrito
+            </button>
+        </div>
+    `;
+
+    card.appendChild(cardInner);
+
+    return card;
+}
+
+// Función para cargar los productos en el DOM
+async function cargarProductos() {
+    const productContainer = document.getElementById('contenedorProductos');
+    productContainer.innerHTML = ''; // Limpiar el contenedor de productos
+
+    const productos = await obtenerProductos();
+
+    productos.forEach(producto => {
+        const cardProducto = crearCardProducto(producto);
+        productContainer.appendChild(cardProducto);
+    });
+}
+
+
 // Evento al cargar la página
-window.addEventListener('load', function () {
+window.addEventListener('DOMContentLoaded', function () {
     actualizarContadorCarrito();
+    cargarProductos();
 });
 
 // Evento al hacer clic en el botón "Agregar al carrito"
@@ -152,7 +207,7 @@ function abrirModalCarrito() {
     document.body.classList.add('modal-open');
 }
 
-(function() {
+(function () {
     // Evento al hacer clic en el icono carrito
     let iconoCarrito = document.getElementsByClassName('carritoIcon')[0];
     iconoCarrito.addEventListener('click', function () {
@@ -316,3 +371,31 @@ formPago.addEventListener('submit', function (event) {
         mostrarMensajeValidacion(mensajesError);
     }
 });
+
+//CLASE 15 PROMESAS, THEN, CATCH, FETCH.
+// ASI ES COMO DEBEMOS MOSTRAR LAS CARDS EN EL DOM, ELIMINANDO LAS CARDS QUE YA TENEMOS CREADAS
+// EN NUESTRO HTML. PASAR LA INFO A UN ARCHIVO JSON Y LLAMARLO DESDE EL JS PARA MOSTRARLO EN EL DOM
+// function getStarWarsCharacters(){
+//     return fetch('https://swapi.dev/api/people/')
+//         .then(response => response.json())
+//         .then(data => {
+//             const characters = data.results;
+
+//             characters.forEach(character => {
+//                 const characterDiv = document.createElement('div');
+//                 characterDiv.classList.add('producto');
+
+//                 characterDiv.innerHTML = `
+//                 <div class='card'>
+//                     <h3>${character.name}</h3>
+//                     <p>height:${character.height}</p>
+//                     <p>Mass:${character.mass}</p>
+//                     <p>Genero:${character.gender}</p>
+//                     <button class="agregar-carrito">Agregar al carrito</button>
+//                 </div>
+//                 `
+//                 productContainer.appendChild(characterDiv)
+//             });
+//         })
+//         .catch(err => console.error(err));
+// }
