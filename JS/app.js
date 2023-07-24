@@ -175,13 +175,6 @@ async function cargarProductos() {
     });
 }
 
-
-// Evento al cargar la página
-window.addEventListener('DOMContentLoaded', function () {
-    actualizarContadorCarrito();
-    cargarProductos();
-});
-
 // Evento al hacer clic en el botón "Agregar al carrito"
 let botonesAgregarCarrito = document.querySelectorAll('.btnAgregarCarrito');
 botonesAgregarCarrito.forEach(function (boton) {
@@ -199,6 +192,12 @@ botonesAgregarCarrito.forEach(function (boton) {
             showConfirmButton: false,
         });
     });
+});
+
+// Evento al cargar la página
+window.addEventListener('DOMContentLoaded', function () {
+    actualizarContadorCarrito();
+    cargarProductos();
 });
 
 // Función para abrir el modal del carrito
