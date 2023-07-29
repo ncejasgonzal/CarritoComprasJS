@@ -3,7 +3,7 @@
         {
             "nombre": "BaByliss Gold",
             "imagen": "../assets/img/----PATILLERA_BABYLISS_GOLD_zyro-image.jpg",
-            "descripcion": "Patillera Babyliss gold inalámbrica.",
+            "descripcion": "Patillera Babyliss gold.",
             "precio": 130000
         },
         {
@@ -19,7 +19,7 @@
             "precio": 43000
         },
         {
-            "nombre": "Wahl Detailer Professional",
+            "nombre": "Wahl Detailer",
             "imagen": "../assets/img/----WAHL_PATILLER_DETAILER_zyro-image.jpg",
             "descripcion": "Patillera Wahl Detailer.",
             "precio": 50000
@@ -39,7 +39,7 @@
         {
             "nombre": "Shaver Teknikpro",
             "imagen": "../assets/img/----SHAVER-TEKNIKPRO_zyro-image.png",
-            "descripcion": "Rasuradora Teknikpro profesional.",
+            "descripcion": "Rasuradora Teknikpro.",
             "precio": 15000
         },
         {
@@ -61,7 +61,7 @@
             "precio": 24000
         },
         {
-            "nombre": "Kit Revlon Planchita + Secador",
+            "nombre": "Revlon Planchita+Secador",
             "imagen": "../assets/img/----KIT-REVLON-PLANCHITA+SECADOR_zyro-image.png",
             "descripcion": "Kit secador + planchita Revlon.",
             "precio": 22000
